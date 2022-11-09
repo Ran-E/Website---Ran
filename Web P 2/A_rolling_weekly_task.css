@@ -12,11 +12,11 @@
 }
 
 nav {
-  display: block;
   text-align: center;
 }
 
 nav a {
+  display: inline-block;
   margin: 50px;
   font-size: 200%;
   text-decoration: none;
