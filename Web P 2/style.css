@@ -60,7 +60,7 @@
   top: 0;
   margin: 0;
   grid-area: title;
-  width: 200px;
+  /* width: 200px; */
   background-color: #6ce2cf;
   text-align: center;
   width: max-content;
@@ -72,7 +72,7 @@
   display: block;
   block-size: auto;
   color: black;
-  padding: 20px;
+  padding: 5px;
   text-decoration: none;
 }
 
