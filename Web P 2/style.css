@@ -1,5 +1,4 @@
 * {
-  /* background-color: bisque; */
   font-family: cursive;
   margin: 0;
   height: 100%;
@@ -12,30 +11,56 @@
 
 .site {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 5fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
-    "headed headed headed headed"
+    "header header header header"
     "title sidebar sidebar sidebar"
     "footer footer footer footer";
 }
 
-h1 {
-  grid-area: headed;
-  font-weight: bold;
+.header {
+  grid-area: header;
+  font-weight: 100;
   font-size: 300%;
-  color: yellow;
-  background-color: blue;
+  background-color: #479ff7;
+  padding-left: 15px;
+  background-image: url(/Images/user.svg);
+  background-position: 99%;
+  background-repeat: no-repeat;
+}
+
+.header a {
+  float: left;
+}
+
+.header hheader1 {
+  color: #f9e94e;
+}
+
+.header header:hover {
+  display: inline-flex;
+  background-color: #555;
+  color: #f9e94e;
+  justify-self: auto;
+}
+
+:-webkit-any-link {
+  color: #f9e94e;
+}
+.header img:hover {
+  display: inline-block;
+  color: white;
 }
 
 .navbar {
   grid-area: title;
-  margin: 0;
-  padding: 80px 0;
   width: 200px;
-  background-color: #f1f1f1;
+  background-color: #6ce2cf;
   text-align: center;
+  width: max-content;
 }
+
 .button {
   font-size: larger;
   display: block;
@@ -43,6 +68,10 @@ h1 {
   color: black;
   padding: 20px;
   text-decoration: none;
+}
+
+.Dark {
+  background-color: #5ecdaf;
 }
 
 .navbar a:hover {
@@ -55,26 +84,55 @@ h1 {
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
+.main_site {
+  grid-area: sidebar;
+  text-align: center;
+  display: inline-flex;
+  flex-direction: column;
+  margin-top: 10px;
+  justify-content: start;
+  align-content: flex-start;
+}
+.main_site h1 {
+  height: 1.5em;
+  font-size: 200%;
+}
+
+.main_site h2 {
+  font-size: 150%;
+
+  height: 2em;
+}
+.main_site h3 {
+  font-size: 125%;
+
+  height: 2em;
+}
+.main_site h4 {
+  font-size: 125%;
+  height: 2em;
+}
+.main_site h5 {
+  font-size: 200%;
+  height: 2em;
+}
+
 .footer {
   grid-area: footer;
-  background-color: darkgoldenrod;
+  background-color: #479ff7;
   padding: 0;
+  text-align: center;
 }
 
 .footer h2 {
-  font-size: 100%;
   block-size: auto;
-
-  display: block;
-  color: black;
+  font-size: 125%;
+  color: #5a646f;
   text-decoration: none;
 }
 .footer a {
-  block-size: auto;
-
-  font-size: 100%;
-  display: block;
-  color: black;
+  font-size: 125%;
+  color: #5a646f;
   text-decoration: none;
 }
 
