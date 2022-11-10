@@ -1,18 +1,19 @@
 * {
   font-family: cursive;
   margin: 0;
-  height: 100%;
   padding: 0;
   border: none;
   outline: none;
   text-decoration: none;
   box-sizing: border-box;
+  overflow-wrap: break-word;
 }
 
 .site {
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto auto;
+  min-height: 100vh;
   grid-template-areas:
     "header header header header"
     "title sidebar sidebar sidebar"
@@ -54,6 +55,10 @@
 }
 
 .navbar {
+  display: block;
+  position: sticky;
+  top: 0;
+  margin: 0;
   grid-area: title;
   width: 200px;
   background-color: #6ce2cf;
@@ -62,6 +67,7 @@
 }
 
 .button {
+  text-decoration: none;
   font-size: larger;
   display: block;
   block-size: auto;
@@ -84,26 +90,25 @@
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-.main_site {
+.scroll-page {
   grid-area: sidebar;
   text-align: center;
-  display: inline-flex;
   flex-direction: column;
   margin-top: 10px;
   justify-content: start;
   align-content: flex-start;
 }
-.main_site h1 {
+.scroll-page h1 {
   height: 1.5em;
   font-size: 200%;
 }
 
-.main_site h2 {
+.scroll-page h2 {
   font-size: 150%;
 
   height: 2em;
 }
-.main_site h3 {
+.scroll-page h3 {
   font-size: 125%;
 
   height: 2em;
@@ -117,10 +122,21 @@
   height: 2em;
 }
 
+.My_favorite_movie img {
+  width: 1000px;
+  grid-area: sidebar;
+  text-align: center;
+  flex-direction: column;
+  justify-content: start;
+  align-content: flex-start;
+}
+
 .footer {
   grid-area: footer;
   background-color: #479ff7;
-  padding: 0;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
   text-align: center;
 }
 
@@ -152,4 +168,21 @@ td {
 
 .HS {
   background-color: chocolate;
+}
+
+/* .navbar .scroll-container {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+} */
+.navbar {
+  padding: 5px;
+}
+.scroll-container {
+  overflow-y: scroll;
+}
+.scroll-page {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
