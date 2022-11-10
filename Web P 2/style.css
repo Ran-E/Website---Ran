@@ -3,6 +3,11 @@
   font-family: cursive;
   margin: 0;
   height: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 .site {
@@ -18,31 +23,59 @@
 h1 {
   grid-area: headed;
   font-weight: bold;
-  font-size: 400%;
-  text-align: center;
-  color: slateblue;
-  background-color: yellow;
-}
-
-nav {
-  grid-area: title;
+  font-size: 300%;
+  color: yellow;
   background-color: blue;
 }
-nav a {
-  color: black;
+
+.navbar {
+  grid-area: title;
+  margin: 0;
+  padding: 80px 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+.button {
   font-size: larger;
+  display: block;
+  block-size: auto;
+  color: black;
+  padding: 20px;
   text-decoration: none;
-  padding: 8px 16px;
 }
 
-nav a:hover {
+.navbar a:hover {
   background-color: #555;
   color: white;
 }
 
-#down {
+.navbar a:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.footer {
   grid-area: footer;
   background-color: darkgoldenrod;
+  padding: 0;
+}
+
+.footer h2 {
+  font-size: 100%;
+  block-size: auto;
+
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+.footer a {
+  block-size: auto;
+
+  font-size: 100%;
+  display: block;
+  color: black;
+  text-decoration: none;
 }
 
 th,
