@@ -1,0 +1,64 @@
+* {
+  /* background-color: bisque; */
+  font-family: cursive;
+  margin: 0;
+  height: 100%;
+}
+
+.site {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "headed headed headed headed"
+    "title sidebar sidebar sidebar"
+    "footer footer footer footer";
+}
+
+h1 {
+  grid-area: headed;
+  font-weight: bold;
+  font-size: 400%;
+  text-align: center;
+  color: slateblue;
+  background-color: yellow;
+}
+
+nav {
+  grid-area: title;
+  background-color: blue;
+}
+nav a {
+  color: black;
+  font-size: larger;
+  text-decoration: none;
+  padding: 8px 16px;
+}
+
+nav a:hover {
+  background-color: #555;
+  color: white;
+}
+
+#down {
+  grid-area: footer;
+  background-color: darkgoldenrod;
+}
+
+th,
+td {
+  border: 1px solid;
+  text-align: center;
+}
+
+.ES {
+  background-color: brown;
+}
+
+.JH {
+  background-color: cyan;
+}
+
+.HS {
+  background-color: chocolate;
+}
