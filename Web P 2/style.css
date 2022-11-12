@@ -23,7 +23,7 @@
 }
 
 :-webkit-any-link {
-  color: #f9e94e;
+  color: inherit;
 }
 
 /* Header of the website */
@@ -71,7 +71,6 @@
   top: 0;
   margin: 0;
   grid-area: title;
-  /* width: 200px; */
   background-color: #6ce2cf;
   text-align: center;
   width: max-content;
@@ -146,14 +145,99 @@
 }
 
 /* Part 1 - My favorite movie */
-.My_favorite_movie img {
-  width: 1000px;
-  grid-area: sidebar;
-  text-align: center;
-  flex-direction: column;
-  justify-content: start;
-  align-content: flex-start;
+.My_favorite_movie {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-rows: auto auto auto;
+  height: 100vh;
+  grid-template-areas:
+    "header header"
+    "title sidebar"
+    "title link"
+    "footer footer";
 }
+.My_favorite_movie header {
+  grid-area: header;
+  height: 1.5em;
+  font-size: 300%;
+  text-align: left;
+  margin-left: 4%;
+}
+#img_m {
+  grid-area: sidebar;
+  display: block;
+  max-width: 40vh;
+  height: 50vh;
+}
+
+.details_m {
+  grid-area: title;
+  display: block;
+  width: auto;
+  text-align: left;
+  margin-left: 5%;
+}
+
+#link_m {
+  grid-area: link;
+  padding: auto;
+  margin: auto;
+  margin-right: 10%;
+  margin-top: -10%;
+  box-sizing: border-box;
+  border: 3px solid #479ff7;
+  border-radius: 20px;
+  background: #6ce2cf;
+}
+
+/* Part 2 - A place I enjoyed visiting */
+
+.A_place_I_enjoyed_visiting {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-rows: auto auto auto;
+  height: 100vh;
+  grid-template-areas:
+    "header header"
+    "title sidebar"
+    "title link"
+    "footer footer";
+}
+.A_place_I_enjoyed_visiting header {
+  grid-area: header;
+  height: 1.5em;
+  font-size: 300%;
+  text-align: left;
+  margin-left: 4%;
+}
+#img_v {
+  grid-area: sidebar;
+  display: block;
+  max-width: 40vh;
+  height: 50vh;
+}
+
+.details_v {
+  grid-area: title;
+  display: block;
+  width: auto;
+  text-align: left;
+  margin-left: 5%;
+}
+
+#link_v {
+  grid-area: link;
+  padding: auto;
+  margin: auto;
+  margin-right: 10%;
+  margin-top: -10%;
+  box-sizing: border-box;
+  border: 3px solid #479ff7;
+  border-radius: 20px;
+  background: #6ce2cf;
+}
+
+/* Part 3 - Feedback form */
 .Personal_Details {
   padding: 4px 20px;
   margin: 8px 8px;
@@ -167,9 +251,6 @@
   margin-left: 24px;
 }
 
-/* Part 2 - A place I enjoyed visiting */
-
-/* Part 3 - Feedback form */
 .Your_Feedback {
   padding: 4px 20px;
   margin: 8px 8px;
