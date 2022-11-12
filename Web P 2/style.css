@@ -1,9 +1,11 @@
+/* General */
 * {
   font-family: cursive;
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
   border: none;
   outline: none;
+
   text-decoration: none;
   box-sizing: border-box;
   overflow-wrap: break-word;
@@ -13,13 +15,18 @@
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: auto auto auto;
-  min-height: 100vh;
+  height: 100vh;
   grid-template-areas:
     "header header header header"
     "title sidebar sidebar sidebar"
     "footer footer footer footer";
 }
 
+:-webkit-any-link {
+  color: #f9e94e;
+}
+
+/* Header of the website */
 .header {
   grid-area: header;
   font-weight: 100;
@@ -35,10 +42,16 @@
   float: left;
 }
 
-.header hheader1 {
+.header {
   color: #f9e94e;
 }
 
+.header img {
+  display: block;
+  margin-top: 25%;
+  height: 50px;
+  width: auto;
+}
 .header header:hover {
   display: inline-flex;
   background-color: #555;
@@ -46,14 +59,12 @@
   justify-self: auto;
 }
 
-:-webkit-any-link {
-  color: #f9e94e;
-}
 .header img:hover {
   display: inline-block;
   color: white;
 }
 
+/* Navigation Bar */
 .navbar {
   display: block;
   position: sticky;
@@ -69,7 +80,7 @@
 .button {
   text-decoration: none;
   font-size: larger;
-  display: block;
+  display: flex;
   block-size: auto;
   color: black;
   padding: 5px;
@@ -90,12 +101,24 @@
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
+.navbar a.external::after {
+  content: url(/images/external.png);
+}
+
+/* Scrolling */
+
+/* Opening text */
+.scroll-container {
+  overflow-y: scroll;
+}
+
 .scroll-page {
+  height: 100%;
   grid-area: sidebar;
   text-align: center;
   flex-direction: column;
   margin-top: 10px;
-  justify-content: start;
+  justify-content: center;
   align-content: flex-start;
 }
 .scroll-page h1 {
@@ -113,15 +136,16 @@
 
   height: 2em;
 }
-.main_site h4 {
+.scroll-page h4 {
   font-size: 125%;
   height: 2em;
 }
-.main_site h5 {
+.scroll-page h5 {
   font-size: 200%;
   height: 2em;
 }
 
+/* Part 1 - My favorite movie */
 .My_favorite_movie img {
   width: 1000px;
   grid-area: sidebar;
@@ -130,26 +154,85 @@
   justify-content: start;
   align-content: flex-start;
 }
+.Personal_Details {
+  padding: 4px 20px;
+  margin: 8px 8px;
+  margin-right: 50px;
+  box-sizing: border-box;
+  border: 3px solid #6ce2cf;
+  border-radius: 20px;
+}
 
-.footer {
-  grid-area: footer;
-  background-color: #479ff7;
-  position: sticky;
-  bottom: 0;
-  width: 100%;
+.Personal_Details #phone {
+  margin-left: 24px;
+}
+
+/* Part 2 - A place I enjoyed visiting */
+
+/* Part 3 - Feedback form */
+.Your_Feedback {
+  padding: 4px 20px;
+  margin: 8px 8px;
+  margin-right: 50px;
+  box-sizing: border-box;
+  border: 3px solid #6ce2cf;
+  border-radius: 20px;
+}
+input[type="text"] {
+  padding: 4px 20px;
+  margin: 8px 8px;
+  box-sizing: border-box;
+  border: 3px solid #6ce2cf;
+  border-radius: 20px;
+}
+
+input[type="email"] {
+  padding: 4px 20px;
+  margin: 8px 33px;
+  box-sizing: border-box;
+  border: 3px solid #6ce2cf;
+  border-radius: 20px;
+}
+
+input[type="tel"] {
+  padding: 4px 20px;
+  margin: 8px 8px;
+  box-sizing: border-box;
+  border: 3px solid #6ce2cf;
+  border-radius: 20px;
+}
+input[type="Date"] {
+  padding: 4px 20px;
+  margin: 8px 8px;
+  box-sizing: border-box;
+  border: 3px solid #6ce2cf;
+  border-radius: 20px;
+}
+
+input[type="radio"] {
+  display: block;
+  margin: 0 auto;
+}
+.Rating label {
+  display: inline-block;
+}
+input[list] {
+  padding: 4px 20px;
+  margin: 8px 8px;
+  box-sizing: border-box;
+  border: 3px solid #6ce2cf;
+  border-radius: 20px;
+}
+
+/* Schools */
+.Schools_T {
+  height: 100vh;
+  grid-area: sidebar;
   text-align: center;
-}
-
-.footer h2 {
-  block-size: auto;
-  font-size: 125%;
-  color: #5a646f;
-  text-decoration: none;
-}
-.footer a {
-  font-size: 125%;
-  color: #5a646f;
-  text-decoration: none;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-content: center;
+  align-content: flex-start;
 }
 
 th,
@@ -170,19 +253,24 @@ td {
   background-color: chocolate;
 }
 
-/* .navbar .scroll-container {
-  display: block;
-  margin: 0 auto;
+/* Footer of the website */
+.footer {
+  grid-area: footer;
+  background-color: #479ff7;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
   text-align: center;
-} */
-.navbar {
-  padding: 5px;
 }
-.scroll-container {
-  overflow-y: scroll;
+
+.footer h2 {
+  block-size: auto;
+  font-size: 125%;
+  color: #5a646f;
+  text-decoration: none;
 }
-.scroll-page {
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+.footer a {
+  font-size: 125%;
+  color: #5a646f;
+  text-decoration: none;
 }

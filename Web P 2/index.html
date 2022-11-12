@@ -10,13 +10,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="site">
+
+  <!-- Header of the website -->
     <div class="header">
       <a href="/index.html">
-        <img alt="icon" src="/Images/favicon.png" height="auto" width="auto" />
+        <img alt="icon" src="/Images/favicon.png"/>
       </a>
       <header><a href="/index.html">Ran Elbaz</a></header>
     </div>
 
+  <!-- Navigation Bar -->
     <nav class="navbar">
       <a class="button" href="#page-1" target="_self"
         >Navigation</a
@@ -37,13 +40,15 @@
       target="_self"
       >Feedback Form</a
     >
-      <a class="button" href="My_favorite _food.html" target="_blank"
-        >My favorite food</a
-      >
-      <a class="button Dark" href="Schools.html" target="_blank">My Schools</a>
-      <a class="button" href="https://github.com/Ran-E/Intro-to-web-dev---Ran.git" target="_blank">The Project on GitHub</a>
+
+      <a class="button external" href="Schools.html" target="_blank">My Schools</a>
+      <a class="button Dark external" href="https://github.com/Ran-E/Intro-to-web-dev---Ran.git" target="_blank">The Project on GitHub</a>
     </nav>
+
+  <!-- Scrolling -->
     <div class="scroll-container">
+
+  <!-- Opening text -->
       <section class="scroll-page" id="page-1">
         <h1>Hello!</h1>
         <h2>Welcome to my website.</h2>
@@ -51,6 +56,8 @@
         <h4>These are my tree favorite emojis:</h4>
         <h5>&#128526 &#128579 &#128527</h5>
       </section>
+
+  <!-- Part 1 - My favorite movie -->
       <section class="My_favorite_movie scroll-page" id="page-2">
         <h1>The Shawshank Redemption</h1>
         <a href="https://www.imdb.com/title/tt0111161/?ref_=nv_sr_srsg_0">The movie details</details></a>
@@ -62,6 +69,8 @@
         <h2>One of the most powerful quotes:</h2>
         <p>Andy Dufresne -“Hope is a good thing, maybe the best of things, and no good thing ever dies.”</p> 
       </section>
+
+  <!-- Part 2 - A place I enjoyed visiting -->
       <section class="A_place_I_enjoyed_visiting scroll-page" id="page-3">
         <h1>A place I enjoyed visiting</h1>
         <h2>Western Wall, Jerusalem, Israel</h2>
@@ -70,10 +79,78 @@
         <iframe src="https://www.google.com/maps/embed?pb=!4v1667942840812!6m8!1m7!1sCAoSLEFGMVFpcFBnVktqUW8taVBiaFN5RkpNR0wxLXRQOXRvU3J0QTNQZktoeTcy!2m2!1d31.7766333!2d35.2342583!3f83.08847249877583!4f9.458154441104043!5f0.4000000000000002" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         ></iframe>
       </section>
+
+  <!-- Part 3 - Feedback form -->
       <section class="Feedback_form" id="page-4">
         <h1>Feedback_form</h1>
+        <h2>I'd love to hear your honest thoughts!</h2>
+        <section class="Personal_Details">
+          <h3>Personal Details</h3>
+          <form action="" method="get" class="Feedback">
+            <div class="Feedback">
+              <label>Full name: 
+                <input type="text" name="name"> 
+              </label> 
+              <label id="phone">Phone number: 
+                <input type="tel" name="number"> 
+              </label> 
+              <br>
+              <label>Email: 
+                <input type="email" name="email"> 
+              </label> 
+              <label>Date of birth: 
+                <input type="date" name="date"> 
+              </label> 
+          </form>
+        </section>
+
+        <section class="Your_Feedback">
+          <h3>Your Feedback</h3>
+          <form action="" method="get" class="Feedback">
+            <div class="Feedback">
+              <label>Rating: 
+                <div class="Rating">
+                  <input type="radio" name="rating1" value="1"> 
+                  <label for="rating1">1</label>
+                </div>
+                <div class="Rating">
+                  <input type="radio" name="rating2" value="2"> 
+                  <label for="rating1">2</label>
+                </div>
+                <div class="Rating">
+                  <input type="radio" name="rating3" value="3"> 
+                  <label for="rating1">3</label>
+                </div>
+                <div class="Rating">
+                  <input type="radio" name="rating4" value="4"> 
+                  <label for="rating1">4</label>
+                </div>
+                <div class="Rating">
+                  <input type="radio" name="rating5" value="5"> 
+                  <label for="rating1">5</label>
+                </div>
+              </label> 
+              
+              <label id="messege">Your messege:: 
+                <input type="text" name="messege"> 
+              </label> 
+              <br>
+              <label>How did you find this website?: 
+                <input list="websites" name="Q">
+                <datalist id="websites">
+                  <option value="GitHub">
+                  <option value="LinkedIn">
+                  <option value="WebDev">
+                  <option value="Google">
+                  <option value="Other">
+                </datalist> 
+              </label> 
+          </form>
+        </section>
       </section>
     </div>
+
+  <!-- Footer of the website -->
     <nav class="footer">
       <h2>Ran Elbaz</h2>
       <a href="mailto: ran.elbaz@grunitech.com">Ran.Elbaz@grunitech.com</a>
