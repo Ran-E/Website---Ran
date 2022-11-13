@@ -78,7 +78,18 @@
       <section class="A_place_I_enjoyed_visiting scroll-page" id="page-3">
         <header>A place I enjoyed visiting</header>
         <a id="link_v" href="https://goo.gl/maps/uY76vGj2N34tALdDA">Open Western Wall on Google Maps</a>
-        <img id="img_v" src="https://thekotel.org/wp-content/uploads/2020/01/hakeren_lemoreshet.jpg" alt="">
+
+        
+        <div class="img_v">
+          <img src=https://thekotel.org/wp-content/uploads/2020/01/hakeren_lemoreshet.jpg style="width:100%">
+          <img src="https://www.itraveljerusalem.com/wp-content/uploads/2016/07/atr-western-wall-2.jpg" style="width:100%">
+          <img src="https://www.itraveljerusalem.com/wp-content/uploads/2016/07/atr-olc-crd-western-wall-area-soldier-noam-chen-3.jpg" style="width:100%">
+          <!-- <img src="/w3images/mountainskies.jpg" style="width:100%"> -->
+          <!-- <img src="/w3images/rocks.jpg" style="width:100%"> -->
+          <!-- <img src="/w3images/underwater.jpg" style="width:100%"> -->
+        </div>
+        
+        
         <div>
           <h2 class="details_v">Western Wall, Jerusalem, Israel</h2>
           <p class="details_v">The Western Wall (Hebrew: הַכּוֹתֶל הַמַּעֲרָבִי)  is an ancient limestone wall in the Old City of Jerusalem. It is a relatively small segment of a far longer ancient retaining wall, known also in its entirety as the "Western Wall". The wall was originally erected as part of the expansion of the Second Jewish Temple begun by Herod the Great, which resulted in the encasement of the natural, steep hill known to Jews as the Temple Mount, in a huge rectangular structure topped by a flat platform, thus creating more space for the Temple itself, its auxiliary buildings, and crowds of worshipers and visitors.</p>
@@ -91,29 +102,28 @@
       <section class="Feedback_form" id="page-4">
         <h1>Feedback_form</h1>
         <h2>I'd love to hear your honest thoughts!</h2>
+        <form action="/index.html">
         <section class="Personal_Details">
           <h3>Personal Details</h3>
-          <form action="" method="get" class="Feedback">
+          
             <div class="Feedback">
               <label>Full name: 
                 <input type="text" name="name"> 
               </label> 
               <label id="phone">Phone number: 
-                <input type="tel" name="number"> 
+                <input type="tel" name="number" placeholder="123-4567-890" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"> 
               </label> 
               <br>
               <label>Email: 
-                <input type="email" name="email"> 
+                <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"> 
               </label> 
               <label>Date of birth: 
                 <input type="date" name="date"> 
               </label> 
-          </form>
         </section>
 
         <section class="Your_Feedback">
           <h3>Your Feedback</h3>
-          <form action="" method="get" class="Feedback">
             <div class="Feedback">
               <label>Rating: 
                 <div class="Rating">
@@ -152,8 +162,15 @@
                   <option value="Other">
                 </datalist> 
               </label> 
-          </form>
+  
         </section>
+        
+        <button type="submit" class="submit border" id="submit" name: "submit" formaction="index.html" > Submit
+        </button>
+        <button type="reset" class="submit border" id="reset" formaction="index.html">Reset
+        </button> 
+      </form>
+
       </section>
     </div>
 

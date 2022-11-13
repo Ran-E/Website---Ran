@@ -168,6 +168,8 @@
   display: block;
   max-width: 40vh;
   height: 50vh;
+  border: 3px solid #6ce2cf;
+  border-radius: 20px;
 }
 
 .details_m {
@@ -180,10 +182,8 @@
 
 #link_m {
   grid-area: link;
-  padding: auto;
-  margin: auto;
-  margin-right: 10%;
-  margin-top: -10%;
+  margin-right: 27%;
+  margin-top: 5%;
   box-sizing: border-box;
   border: 3px solid #479ff7;
   border-radius: 20px;
@@ -210,11 +210,16 @@
   text-align: left;
   margin-left: 4%;
 }
-#img_v {
+.img_v {
   grid-area: sidebar;
-  display: block;
+  display: flexbox;
   max-width: 40vh;
   height: 50vh;
+  box-sizing: border-box;
+  padding: 5px;
+  overflow-x: scroll;
+  scrollbar-color: #6ce2cf;
+  border: 3px solid #6ce2cf;
 }
 
 .details_v {
@@ -227,10 +232,8 @@
 
 #link_v {
   grid-area: link;
-  padding: auto;
-  margin: auto;
-  margin-right: 10%;
-  margin-top: -10%;
+  margin-right: 27%;
+  margin-top: 5%;
   box-sizing: border-box;
   border: 3px solid #479ff7;
   border-radius: 20px;
@@ -238,6 +241,21 @@
 }
 
 /* Part 3 - Feedback form */
+
+.Feedback_form h1 {
+  display: inline-block;
+  margin-left: 1.5%;
+}
+
+.Feedback_form h2 {
+  display: block;
+  margin-left: 1.5%;
+}
+
+.Your_Feedback h3 {
+  display: inline;
+}
+
 .Personal_Details {
   padding: 4px 20px;
   margin: 8px 8px;
@@ -289,19 +307,60 @@ input[type="Date"] {
   border: 3px solid #6ce2cf;
   border-radius: 20px;
 }
-
-input[type="radio"] {
-  display: block;
-  margin: 0 auto;
-}
-.Rating label {
+.Rating {
   display: inline-block;
 }
-input[list] {
+.Rating label {
+  letter-spacing: 12px;
+  font-weight: normal;
+}
+#messege {
+  padding: 4px 20px;
+  margin: 1%;
+}
+
+#messege input[type="text"] {
   padding: 4px 20px;
   margin: 8px 8px;
   box-sizing: border-box;
   border: 3px solid #6ce2cf;
+  border-radius: 20px;
+}
+
+input[list] {
+  display: block;
+  padding: 2px 20px;
+  margin: 18px;
+  box-sizing: border-box;
+  border: 3px solid #6ce2cf;
+  border-radius: 20px;
+}
+
+#multi_choice {
+  margin-top: 8px;
+  padding: 10px 50px;
+}
+.submit {
+  padding: 10px 30px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 80px;
+}
+#submit {
+  margin-left: 1%;
+  background-color: #6ce2cf;
+  grid-area: link;
+
+  box-sizing: border-box;
+  border: 3px solid #479ff7;
+  border-radius: 20px;
+}
+#reset {
+  margin-left: 1%;
+  background-color: yellow;
+  grid-area: link;
+  box-sizing: border-box;
+  border: 3px solid #479ff7;
   border-radius: 20px;
 }
 
